@@ -13,11 +13,16 @@ app.use(cookieParser());
 // allow cors requests from any origin and with credentials
 app.use(cors({ origin: (origin, callback) => callback(null, true), credentials: true }));
 
+
+/*----------initial HTML page---------*/
+const radheKrishna = require('./RadheKrishna');
+app.use('/', radheKrishna);
+
 // api routes
 app.use('/accounts', require('./accounts/accounts.controller'));
 
 // swagger docs route
-app.use('/api-docs', require('_helpers/swagger'));
+// app.use('/api-docs', require('_helpers/swagger'));
 
 // global error handler
 app.use(errorHandler);
