@@ -5,6 +5,6 @@ const YAML = require('yamljs');
 // const swaggerDocument = YAML.load('./swagger.yaml');
 const swaggerDocument = require('../swagger.yaml');
 
-router.use('/', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+// router.use('/', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 module.exports = router;
