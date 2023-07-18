@@ -19,7 +19,7 @@ const radheKrishna = require('./RadheKrishna');
 app.use('/', radheKrishna);
 
 // api routes
-app.use('/accounts', require('./accounts/accounts.controller'));
+app.use('/', require('./accounts/accounts.controller'));
 
 // swagger docs route
 // app.use('/api-docs', require('_helpers/swagger'));
